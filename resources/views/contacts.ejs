@@ -1,0 +1,25 @@
+<section class="flex flex-col items-center">
+    <h1 class="text-3xl font-bold py-3">contacts</h1>
+    <div class="w-4/5 border flex flex-wrap rounded-lg px-7 py-5">
+        <table class="table-auto w-full">
+            <thead class="text-lg">
+                <tr>
+                    <th class="text-left">First name</th>
+                    <th class="text-left">last name</th>
+                    <th class="text-left">phone number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(let i=0;i < data.length;i++){%>
+                    <tr class="odd:bg-gray-100 p-3 hover:text-amber-400">
+                        <td ><a href="/contacts/details/<%=data[i].phone%>"><%=data[i].firstName%></a></td>
+                        <td><a href="/contacts/details/<%=data[i].phone%>"><%=data[i].lastName%></a></td>
+                        <td><a href="/contacts/details/<%=data[i].phone%>"><%=data[i].phone%></a></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+
+    </div>
+       
+</section>

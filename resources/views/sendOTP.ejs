@@ -1,0 +1,12 @@
+<section class="flex flex-col items-center">
+    <h1 class="text-3xl font-bold py-3">Send OTP to <%=phoneNumber%> <span id="firstname"><%=firstname%></span></h1>
+    <div class="w-4/5 border flex flex-col flex-wrap rounded-lg px-7 py-5 justify-evenly">
+        <form id="myform">
+            <label class="text-sm font-medium text-slate-700 my-1" for="phonenumber">Phone</label>
+            <input type="text" class="border rounded-lg w-1/3 p-3 my-3" value="<%=phoneNumber%>" disabled="true" name="phonenumber" id="phonenumber">
+            <label class="text-sm font-medium text-slate-700 my-1" for="msg">Message</label>
+            <input type="text" class="border rounded-lg w-1/3 p-3 my-3" value="your otp is <%=otp%>" name="msg" id="msg">
+            <button type="submit" id="send-otp" class="bg-indigo-700 py-3 rounded text-white w-fit px-7 my-4">send</button>
+        </form>    
+    </div>
+</section>

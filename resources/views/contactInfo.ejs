@@ -1,0 +1,15 @@
+<section class="flex flex-col items-center">
+    <h1 class="text-3xl font-bold py-3">Contact Info</h1>
+    <div class="w-4/5 border rounded-lg px-16 py-5">
+        
+        <%data.forEach((contact)=>{%>
+            <%if(contact.phone===phoneNumber){%>
+                <div><span class="text-xl font-bold pr-5">First Name : </span><%=contact.firstName%></div>
+                <div><span class="text-xl font-bold pr-5">Last Name :</span><%=contact.lastName%></div>
+                <div><span class="text-xl font-bold pr-5">Phone Number :</span><%=phoneNumber%></div>
+                <div class="my-4"><a class="bg-indigo-700 px-2 py-3 rounded text-white " href="/send-otp/<%=phoneNumber%>/<%=contact.firstName%>">send Message</a></div>
+            <%}%>
+        <%})%>
+    </div>
+
+</section>
